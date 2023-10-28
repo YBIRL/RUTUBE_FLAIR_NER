@@ -5,7 +5,7 @@ from flair.models import SequenceTagger
 from flair.trainers import ModelTrainer
 
 
-corpus = MultiCorpus([NER_MULTI_WIKINER()])
+corpus = MultiCorpus([NER_MULTI_WIKINER()]).downsample(0.1)
 
 # 2. what label do we want to predict?
 label_type = 'ner'
